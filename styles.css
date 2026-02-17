@@ -1,10 +1,12 @@
 :root {
-  --bg: #080b16;
-  --bg-alt: #11152b;
-  --text: #f0f4ff;
-  --muted: #b8c3e0;
-  --accent: #46d6ff;
-  --accent-2: #7b6dff;
+  --bg: #0a0f1f;
+  --bg-alt: #101a33;
+  --surface: rgba(255, 255, 255, 0.04);
+  --text: #eaf1ff;
+  --muted: #adc0e6;
+  --primary: #2ec5ff;
+  --primary-strong: #169bd0;
+  --border: rgba(255, 255, 255, 0.14);
 }
 
 * {
@@ -14,7 +16,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #101835, var(--bg));
+  background: linear-gradient(180deg, #0d1428 0%, var(--bg) 40%, #080c18 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -44,9 +46,9 @@ h3,
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(10px);
-  background: rgba(8, 11, 22, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  background: rgba(10, 15, 31, 0.84);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-wrap,
@@ -73,8 +75,9 @@ h3,
   font-size: 1.2rem;
 }
 
-.logo span {
-  color: var(--accent);
+.logo span,
+.badge {
+  color: var(--primary);
 }
 
 a {
@@ -89,15 +92,15 @@ a {
 
 .nav-links a:hover,
 .site-footer a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .btn {
   display: inline-block;
   border: 0;
   text-decoration: none;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  color: #071021;
+  background: linear-gradient(90deg, var(--primary-strong), var(--primary));
+  color: #031220;
   font-weight: 700;
   padding: 0.8rem 1.15rem;
   border-radius: 0.7rem;
@@ -114,11 +117,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.badge {
-  color: var(--accent);
-  font-weight: 700;
-}
-
 .lead {
   color: var(--muted);
   max-width: 58ch;
@@ -129,8 +127,8 @@ a {
 }
 
 .hero-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.5rem;
   min-width: 280px;
@@ -150,17 +148,12 @@ a {
 
 .card,
 .feature-grid article,
-.timeline,
 details,
 .signup {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 0.9rem;
   padding: 1rem;
-}
-
-.timeline {
-  padding-left: 1.5rem;
 }
 
 details {
@@ -173,7 +166,7 @@ summary {
 }
 
 .cta {
-  background: linear-gradient(120deg, rgba(70, 214, 255, 0.12), rgba(123, 109, 255, 0.15));
+  background: linear-gradient(120deg, rgba(46, 197, 255, 0.1), rgba(16, 26, 51, 0.45));
 }
 
 .signup {
@@ -189,7 +182,7 @@ label {
 }
 
 input {
-  background: #05070f;
+  background: #070d1d;
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
@@ -198,7 +191,7 @@ input {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border);
   padding: 1.2rem 0;
 }
 
