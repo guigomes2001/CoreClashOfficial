@@ -115,6 +115,16 @@ a {
   color: inherit;
 }
 
+.inline-link {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(46, 200, 255, 0.6);
+}
+
+.inline-link:hover {
+  color: #73ddff;
+}
+
 .nav-links a,
 .site-footer a {
   text-decoration: none;
@@ -167,6 +177,12 @@ a {
 .section-copy {
   color: var(--muted);
   max-width: 65ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .hero-panel,
